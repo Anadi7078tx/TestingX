@@ -40,10 +40,10 @@ pipeline {
           
          
  
-        stage('Deploy our image') { 
+        stage('Junit') { 
              steps { 
  
-            sh 'mvn tomcat7:run'
+            sh 'junit allowEmptyResults: true, testResults: 'TestingX/target/test-reports/a.xml''
                  } 
              }
          } 
