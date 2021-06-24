@@ -21,9 +21,22 @@
       <url>https://raw.github.com/dragome/dragome/master/maven</url>
     </repository>
   </repositories>
+	
+	
+<properties>
+        <junit.jupiter.version>5.6.2</junit.jupiter.version>
+        <!-- configure the compiler plugin via properties rather than plugin -->
+        <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- to generate html junit reports for test phase -->
+        <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
+        <maven.surefire.report.version>3.0.0-M4</maven.surefire.report.version>
+    </properties>
 
   <dependencies>
-	      <dependency>
+<dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>5.11</version>
@@ -63,6 +76,13 @@
         <version>5.4.2</version>
         <scope>test</scope>
     </dependency>
+	  
+     <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
 	 
 
 	  
@@ -111,7 +131,11 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.1</version>
         </plugin>
-    
+    <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven-site-plugin.version}</version>
+            </plugin>
 	    
 	    
 	    
