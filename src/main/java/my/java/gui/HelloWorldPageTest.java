@@ -37,3 +37,4 @@ public class HelloWorldPageTest {
 	public void testingHelloWorld() {
 		System.out.println( "Hello + World");
 	}
+}
