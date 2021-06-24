@@ -35,8 +35,7 @@ pipeline {
                     }
             
          } 
-         stage('Nexus artifact uplaod')
-{
+        
 
           
          
