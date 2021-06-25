@@ -40,12 +40,12 @@ pipeline {
           
          
  
-        stage('Junit') { 
-             steps { 
+//         stage('Junit') { 
+//              steps { 
  
-            sh 'junit allowEmptyResults: true, testResults: 'TestingX/target/test-reports/a.xml''
-                 } 
-             }
+//             sh 'junit allowEmptyResults: true, testResults: 'TestingX/target/test-reports/a.xml''
+//                  } 
+//              }
          } 
 }
  
